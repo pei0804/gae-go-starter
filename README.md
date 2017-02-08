@@ -16,4 +16,5 @@ make local
 
 ## Required Install
 
+- Python 2.7.x
 - [goapp](https://cloud.google.com/appengine/docs/go/download)
