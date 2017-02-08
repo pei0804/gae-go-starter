@@ -1,0 +1,12 @@
+package: github.com/tikasan/gae-go-starter
+import:
+- package: github.com/go-sql-driver/mysql
+  version: v1.2-88-ga197e5d
+- package: github.com/labstack/echo
+  version: v3.0.3
+  subpackages:
+  - middleware
+- package: google.golang.org/appengine/...
+- package: cloud.google.com/go/storage
+- package: github.com/mjibson/goon
+- package: gopkg.in/yaml.v1

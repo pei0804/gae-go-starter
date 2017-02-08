@@ -1,0 +1,53 @@
+hash: fd33b366bbbb11d37c455436ac33cf23812552a2595d74e68210c15c233cce48
+updated: 2017-02-08T13:54:07.504277563+09:00
+imports:
+- name: cloud.google.com/go
+  version: ce650573d812270c64426f3df9fd220324d24b2f
+  subpackages:
+  - storage
+- name: github.com/dgrijalva/jwt-go
+  version: 9ed569b5d1ac936e6494082958d63a6aa4fff99a
+- name: github.com/go-sql-driver/mysql
+  version: a197e5d40516f2e9f74dcee085a5f2d4604e94df
+- name: github.com/labstack/echo
+  version: 8d504c1b699c757b267255c53b3e5219f9974abc
+  subpackages:
+  - middleware
+- name: github.com/labstack/gommon
+  version: 9a43ff0d261e0e65594422e9eee08cf301aabbe7
+  subpackages:
+  - bytes
+  - color
+  - log
+  - random
+- name: github.com/mattn/go-colorable
+  version: d228849504861217f796da67fae4f6e347643f15
+- name: github.com/mattn/go-isatty
+  version: 30a891c33c7cde7b02a981314b4228ec99380cca
+- name: github.com/mjibson/goon
+  version: a9ac1d26f6dbfd9538f4e1e02a04061ef41c1c17
+- name: github.com/tylerb/graceful
+  version: 4df1190835320af7076dfcf27b3d071fd3612caf
+- name: github.com/valyala/fasttemplate
+  version: 3b874956e03f1636d171bda64b130f9135f42cff
+- name: golang.org/x/crypto
+  version: ede567c8e044a5913dad1d1af3696d9da953104c
+  subpackages:
+  - acme
+  - acme/autocert
+- name: golang.org/x/net
+  version: 4971afdc2f162e82d185353533d3cf16188a9f4e
+  subpackages:
+  - context
+  - context/ctxhttp
+- name: golang.org/x/sys
+  version: 30237cf4eefd639b184d1f2cb77a581ea0be8947
+  subpackages:
+  - unix
+- name: google.golang.org/appengine
+  version: 2e4a801b39fc199db615bfca7d0b9f8cd9580599
+  subpackages:
+  - '...'
+- name: gopkg.in/yaml.v1
+  version: 9f9df34309c04878acc86042b16630b0f696e1de
+testImports: []
