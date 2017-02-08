@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/labstack/echo"
 	"fmt"
+	"github.com/labstack/echo"
 )
 
 type Request struct {
