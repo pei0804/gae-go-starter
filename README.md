@@ -1,12 +1,18 @@
 # gae-go-starter
 
-## Install
+## Required Install 
+- Python 2.7.x
+- [goapp](https://cloud.google.com/appengine/docs/go/download)
+
+## How to use
+
+### Install
 
 ```bash
 make dev
 ```
 
-## Run
+### local run
 
 ```bash
 make local
@@ -14,7 +20,13 @@ make local
 
 - [here](http://localhost:8080)
 
-## Required Install
+### Deploy
 
-- Python 2.7.x
-- [goapp](https://cloud.google.com/appengine/docs/go/download)
+#### first time
+
+```
+gcloud init
+gcloud auth login
+gcloud config set project "your-project-id"
+gcloud app deploy
+```

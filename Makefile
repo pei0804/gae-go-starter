@@ -35,10 +35,10 @@ gen:
 	cd model && go generate
 
 deploy:
-	goapp deploy -application hoge ./app
+	goapp deploy -application for-handson ./app
 
 rollback:
-	appcfg.py rollback ./app -A hoge
+	appcfg.py rollback ./app -A for-handson
 
 local:
 	goapp serve ./app
