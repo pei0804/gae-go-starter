@@ -1,5 +1,6 @@
-DBNAME:=motivating_menu
 ENV:=development
+DB_CONTAINER_NAME:=gaegostarter_db
+DBNAME:=gaegostarter_db
 
 setup:
 	which glide || go get -v github.com/Masterminds/glide
@@ -30,6 +31,21 @@ migrate/status:
 
 migrate/dry:
 	sql-migrate up -dryrun -env=$(ENV)
+
+docker/build: Dockerfile docker-compose.yml
+	docker-compose build
+
+docker/start:
+	docker-compose up -d
+
+docker/stop:
+	docker-compose down
+
+docker/logs:
+	docker-compose logs
+
+docker/clean:
+	docker-compose rm
 
 gen:
 	cd model && go generate
