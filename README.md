@@ -10,21 +10,21 @@
 
 ```bash
 // Required package download
-make dev
+$ make dev
 
 // MySQL start
-make docker/build
-make docker/start
+$ make docker/build
+$ make docker/start
 
 // Create Database
-make migrate/init 
-make migrate/up 
+$ make migrate/init 
+$ make migrate/up 
 ```
 
 ### local run
 
 ```bash
-make local
+$ make local
 ```
 
 - [here](http://localhost:8080)
@@ -33,9 +33,10 @@ make local
 
 #### first time
 
+```bash
+$ goapp deploy -application "project-name here" ./app
+or
+$ make deploy
 ```
-gcloud init
-gcloud auth login
-gcloud config set project "your-project-id"
-gcloud app deploy
-```
+
+※You can use shortcuts by rewriting the Makefile
