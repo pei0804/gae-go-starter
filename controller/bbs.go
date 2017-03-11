@@ -13,7 +13,6 @@ type BBS struct {
 }
 
 func (b *BBS) Index(c echo.Context) error {
-
 	var cos []model.Comments
 	b.DB.Order("id desc").Find(&cos)
 	data := struct {
@@ -42,7 +41,6 @@ func (b *BBS) New(c echo.Context) error {
 }
 
 func (b *BBS) Save(c echo.Context) error {
-
 	comment := c.FormValue("comment")
 	name := c.FormValue("name")
 	cos := model.Comments{Name: name, Comment: comment}

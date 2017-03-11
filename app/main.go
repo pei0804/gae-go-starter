@@ -1,22 +1,18 @@
 package server
 
 import (
-	"html/template"
+	"io"
 	"log"
 	"net/http"
+	"os"
 
+	"github.com/alecthomas/template"
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/suzuken/wiki/db"
-	"github.com/tikasan/gae-go-starter/controller"
-
-	"io"
-
-	"os"
-
-	_ "github.com/go-sql-driver/mysql"
+	"github.com/tikasan/gae-go-starter/db"
 	"github.com/tikasan/gae-go-starter/api"
+	"github.com/tikasan/gae-go-starter/controller"
 )
 
 type Server struct {
@@ -50,7 +46,6 @@ func (s *Server) Setup(env string) {
 
 func (s *Server) Run() {
 	s.echo = echo.New()
-
 	s.echo.Use(middleware.Logger())
 	s.echo.Use(middleware.Recover())
 	s.echo.Use(middleware.CORS())

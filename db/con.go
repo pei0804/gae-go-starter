@@ -1,21 +1,20 @@
 package db
 
 import (
-	"database/sql"
 	"io"
 	"io/ioutil"
 	"os"
 
-	"gopkg.in/yaml.v1"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gopkg.in/yaml.v1"
 )
 
 // Configs have configuration for each environment.
 type Configs map[string]*Config
 
 // Open creates connection between database for each environment.
-func (cs Configs) Open(env string) (*sql.DB, error) {
+func (cs Configs) Open(env string) (*gorm.DB, error) {
 	config, ok := cs[env]
 	if !ok {
 		return nil, nil
@@ -38,7 +37,7 @@ func (c *Config) DSN() string {
 
 // Open connets database.
 // NOTE: supports mysql only.
-func (c *Config) Open() (*sql.DB, error) {
+func (c *Config) Open() (*gorm.DB, error) {
 	return gorm.Open("mysql", c.DSN())
 }
 
