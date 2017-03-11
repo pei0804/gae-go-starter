@@ -1,0 +1,24 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><a href="/new">書き込む</a></p>
+
+    {{range .Comments}}
+    <ul>
+        <li><a href="/{{ .ID }}">{{ .ID }}</a></li>
+        <li>{{ .Name | html }}</li>
+        <li>{{ .Comment | html }}</li>
+        <li><a href="/edit/{{ .ID }}">編集する</a></li>
+        <li><a href="/delete/{{ .ID }}">削除する</a></li>
+    </ul>
+    <hr>
+    {{end}}
+
+</body>
+</html>
+{{end}}

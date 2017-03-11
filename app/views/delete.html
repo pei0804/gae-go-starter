@@ -1,0 +1,29 @@
+{{define "delete"}}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/delete" method="post">
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ .ID }}<input type="hidden" name="id" value="{{ .ID }}"></td>
+        </tr>
+        <tr>
+            <th>名前</th>
+            <td>{{ .Name | html }}</td>
+        </tr>
+        <tr>
+            <th>内容</th>
+            <td>{{ .Comment | html }}</td>
+        </tr>
+    </table>
+    <input type="submit" value="削除">
+</form>
+
+</body>
+</html>
+{{end}}

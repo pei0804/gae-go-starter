@@ -1,0 +1,34 @@
+{{define "show"}}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><a href="/">一覧へ戻る</a></p>
+<table>
+    <tr>
+        <th>ID</th>
+        <td>{{ .ID }}</td>
+    </tr>
+    <tr>
+        <th>名前</th>
+        <td>{{ .Name | html }}</td>
+    </tr>
+    <tr>
+        <th>内容</th>
+        <td>{{ .Comment | html }}</td>
+    </tr>
+    <tr>
+        <th>作成時間</th>
+        <td>{{ .CreatedAt }}</td>
+    </tr>
+    <tr>
+        <th>更新時間</th>
+        <td>{{ .UpdatedAt }}</td>
+    </tr>
+</table>
+</body>
+</html>
+{{end}}
