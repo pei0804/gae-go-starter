@@ -1,5 +1,5 @@
-hash: fd33b366bbbb11d37c455436ac33cf23812552a2595d74e68210c15c233cce48
-updated: 2017-02-08T13:54:07.504277563+09:00
+hash: 82ece0d5068cb5516f52e94bfa4a703f3461832e3fac85db0de79c17e16eb797
+updated: 2017-03-11T12:43:19.213950858+09:00
 imports:
 - name: cloud.google.com/go
   version: ce650573d812270c64426f3df9fd220324d24b2f
@@ -9,6 +9,12 @@ imports:
   version: 9ed569b5d1ac936e6494082958d63a6aa4fff99a
 - name: github.com/go-sql-driver/mysql
   version: a197e5d40516f2e9f74dcee085a5f2d4604e94df
+- name: github.com/jinzhu/gorm
+  version: 5409931a1bb87e484d68d649af9367c207713ea2
+  subpackages:
+  - dialects/mysql
+- name: github.com/jinzhu/inflection
+  version: 1c35d901db3da928c72a72d8458480cc9ade058f
 - name: github.com/labstack/echo
   version: 8d504c1b699c757b267255c53b3e5219f9974abc
   subpackages:
@@ -26,6 +32,10 @@ imports:
   version: 30a891c33c7cde7b02a981314b4228ec99380cca
 - name: github.com/mjibson/goon
   version: a9ac1d26f6dbfd9538f4e1e02a04061ef41c1c17
+- name: github.com/suzuken/wiki
+  version: 26f3c19f60b84c38fd996568bc616d963dc52536
+  subpackages:
+  - db
 - name: github.com/tylerb/graceful
   version: 4df1190835320af7076dfcf27b3d071fd3612caf
 - name: github.com/valyala/fasttemplate

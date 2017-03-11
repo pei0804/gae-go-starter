@@ -10,3 +10,5 @@ import:
 - package: cloud.google.com/go/storage
 - package: github.com/mjibson/goon
 - package: gopkg.in/yaml.v1
+- package: github.com/jinzhu/gorm
+- package: github.com/jinzhu/inflection
