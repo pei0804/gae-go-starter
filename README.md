@@ -9,7 +9,16 @@
 ### Install
 
 ```bash
+// Required package download
 make dev
+
+// MySQL start
+make docker/build
+make docker/start
+
+// Create Database
+make migrate/init 
+make migrate/up 
 ```
 
 ### local run
