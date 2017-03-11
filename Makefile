@@ -2,6 +2,7 @@ ENV:=development
 DB_CONFIG:=app/dbconfig.yml
 DB_CONTAINER_NAME:=gaegostarter_db
 DBNAME:=gaegostarter_db
+PROJECT:=for-handson
 
 setup:
 	which glide || go get -v github.com/Masterminds/glide
@@ -52,10 +53,10 @@ gen:
 	cd model && go generate
 
 deploy:
-	goapp deploy -application for-handson ./app
+	goapp deploy -application $(PROJECT) ./app
 
 rollback:
-	appcfg.py rollback ./app -A for-handson
+	appcfg.py rollback ./app -A $(PROJECT)
 
 local:
 	goapp serve ./app
