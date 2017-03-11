@@ -1,4 +1,5 @@
 ENV:=development
+DB_CONFIG:=app/dbconfig.yml
 DB_CONTAINER_NAME:=gaegostarter_db
 DBNAME:=gaegostarter_db
 
@@ -21,16 +22,16 @@ migrate/init:
 	mysql -u root -h localhost --protocol tcp -e "create database \`$(DBNAME)\`" -p
 
 migrate/up:
-	sql-migrate up -env=$(ENV)
+	sql-migrate up -env=$(ENV) -config=$(DB_CONFIG)
 
 migrate/down:
-	sql-migrate down -env=$(ENV)
+	sql-migrate down -env=$(ENV) -config=$(DB_CONFIG)
 
 migrate/status:
-	sql-migrate status -env=$(ENV)
+	sql-migrate status -env=$(ENV) -config=$(DB_CONFIG)
 
 migrate/dry:
-	sql-migrate up -dryrun -env=$(ENV)
+	sql-migrate up -dryrun -env=$(ENV) -config=$(DB_CONFIG)
 
 docker/build: Dockerfile docker-compose.yml
 	docker-compose build
