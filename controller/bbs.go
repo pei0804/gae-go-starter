@@ -74,7 +74,6 @@ func (b *BBS) DeleteConf(c echo.Context) error {
 	id := c.Param("id")
 	var comment model.Comments
 	b.DB.Where("id = ?", id).Find(&comment)
-
 	data := struct {
 		model.Comments
 	}{
