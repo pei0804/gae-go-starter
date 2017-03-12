@@ -13,6 +13,7 @@ import (
 	"github.com/tikasan/gae-go-starter/db"
 	"github.com/tikasan/gae-go-starter/api"
 	"github.com/tikasan/gae-go-starter/controller"
+	"github.com/tikasan/gae-go-starter/define"
 )
 
 type Server struct {
@@ -33,7 +34,7 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 }
 
 func (s *Server) Setup(env string) {
-	cs, err := db.NewConfigsFromFile("dbconfig.yml")
+	cs, err := db.NewConfigsFromFile(define.DB_CONFIG)
 	if err != nil {
 		log.Fatalf("cannot open database configuration. exit. %s", err)
 	}
