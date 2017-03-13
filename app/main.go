@@ -67,7 +67,7 @@ func (s *Server) Run() {
 	s.echo.POST("/delete", BBS.Delete)
 
 	API := &api.Request{DB: s.db}
-	s.echo.GET("/api/comment", API.GetAllComment)
+	s.echo.GET("/api/comments", API.GetAllComment)
 
 	s.echo.Pre(middleware.RemoveTrailingSlash())
 	http.Handle("/", s.echo)
