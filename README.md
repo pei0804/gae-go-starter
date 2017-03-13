@@ -17,8 +17,7 @@ $ make docker/build
 $ make docker/start
 
 // Create Database
-$ make migrate/init 
-$ make migrate/up 
+$ make db/init 
 ```
 
 ### local run
