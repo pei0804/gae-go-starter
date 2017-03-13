@@ -14,7 +14,8 @@ type Request struct {
 
 func (r *Request) GetAllComment(c echo.Context) error {
 	var cos []model.Comments
-	err := r.DB.Find(&cos).Error; if err != nil {
+	err := r.DB.Find(&cos).Error
+	if err != nil {
 		return c.Render(http.StatusOK, "err", err.Error())
 	}
 	return c.JSON(http.StatusOK, &cos)
