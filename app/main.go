@@ -14,6 +14,7 @@ import (
 	"github.com/tikasan/gae-go-starter/api"
 	"github.com/tikasan/gae-go-starter/controller"
 	"github.com/tikasan/gae-go-starter/define"
+	"github.com/tikasan/gae-go-starter/model"
 )
 
 type Server struct {
@@ -43,6 +44,7 @@ func (s *Server) Setup(env string) {
 		log.Fatalf("db initialization failed: %s", err)
 	}
 	s.db = db
+	s.db.AutoMigrate(model.Comments{})
 }
 
 func (s *Server) Run() {
