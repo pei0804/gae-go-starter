@@ -9,8 +9,6 @@ setup:
 	glide install
 
 dev:
-	which sql-migrate || go get -v github.com/rubenv/sql-migrate/...
-	which scaneo || go get -v github.com/variadico/scaneo
 	which glide || go get -v github.com/Masterminds/glide
 	which direnv || go gore -v github.com/zimbatm/direnv
 	direnv allow
@@ -19,20 +17,8 @@ dev:
 test:
 	go test -v $(shell glide novendor)
 
-migrate/init:
+db/init:
 	mysql -u root -h localhost --protocol tcp -e "create database \`$(DBNAME)\`" -p
-
-migrate/up:
-	sql-migrate up -env=$(ENV) -config=$(DB_CONFIG)
-
-migrate/down:
-	sql-migrate down -env=$(ENV) -config=$(DB_CONFIG)
-
-migrate/status:
-	sql-migrate status -env=$(ENV) -config=$(DB_CONFIG)
-
-migrate/dry:
-	sql-migrate up -dryrun -env=$(ENV) -config=$(DB_CONFIG)
 
 docker/build: Dockerfile docker-compose.yml
 	docker-compose build
