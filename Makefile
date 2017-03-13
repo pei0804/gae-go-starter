@@ -35,9 +35,6 @@ docker/logs:
 docker/clean:
 	docker-compose rm
 
-gen:
-	cd model && go generate
-
 deploy:
 	goapp deploy -application $(PROJECT) ./app
 
