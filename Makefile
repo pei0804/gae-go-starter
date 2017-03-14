@@ -10,7 +10,7 @@ setup:
 
 dev:
 	which glide || go get -v github.com/Masterminds/glide
-	which direnv || go gore -v github.com/zimbatm/direnv
+	which direnv || go get -v github.com/zimbatm/direnv
 	direnv allow
 	glide install
 
