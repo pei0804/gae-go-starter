@@ -12,3 +12,4 @@ import:
 - package: gopkg.in/yaml.v1
 - package: github.com/jinzhu/gorm
 - package: github.com/jinzhu/inflection
+- package: github.com/alecthomas/template
