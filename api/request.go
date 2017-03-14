@@ -12,7 +12,7 @@ type Request struct {
 	DB *gorm.DB
 }
 
-func (r *Request) GetAllComment(c echo.Context) error {
+func (r *Request) GetAllComments(c echo.Context) error {
 	var cos []model.Comments
 	err := r.DB.Find(&cos).Error
 	if err != nil {

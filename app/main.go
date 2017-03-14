@@ -10,9 +10,9 @@ import (
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/tikasan/gae-go-starter/db"
 	"github.com/tikasan/gae-go-starter/api"
 	"github.com/tikasan/gae-go-starter/controller"
+	"github.com/tikasan/gae-go-starter/db"
 	"github.com/tikasan/gae-go-starter/define"
 	"github.com/tikasan/gae-go-starter/model"
 )
@@ -69,7 +69,7 @@ func (s *Server) Run() {
 	s.echo.POST("/delete", BBS.Delete)
 
 	API := &api.Request{DB: s.db}
-	s.echo.GET("/api/comments", API.GetAllComment)
+	s.echo.GET("/api/comments", API.GetAllComments)
 
 	s.echo.Pre(middleware.RemoveTrailingSlash())
 	http.Handle("/", s.echo)
